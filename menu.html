@@ -1,0 +1,449 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonlight cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Radley:ital@0;1&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css file/style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <header class ="navbar">    
+        <nav class ="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MOONLIGHT CAFE</span>
+            </div>
+                <ul class ="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html">FEATURED</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="index.html">ABOUT</a></li>
+                    <li><a href="index.html">CONTACT</a></li>
+                </ul>
+            <div class = "nav-btn">
+                <button class="history-btn" type="button" aria-label="Order history">
+                    Order History
+                </button>
+                
+                <button class="cart-btn" type="button" aria-label="Open shopping cart">
+                    Cart <span class="cart-count" aria-live="polite">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+            <!-- MENU SECTION -->
+    <section class = "menu-card-section" id = "menu-card">
+        <div class = "menu-card-container">
+            <div class = "menu-card-header">
+                <h2 class = "eyebrow">Our Menu</h2>
+                <p class = "menu-card-title">What we serve</p>
+            </div>
+
+            <div class = "category-filter">
+                <button class = "category-btn active" data-category = "all" type="button">All</button>
+                <button class = "category-btn" data-category = "coffee" type="button">Espresso-Based Coffee</button>
+                <button class = "category-btn" data-category = "iced" type="button">Iced Coffee</button>
+                <button class = "category-btn category-btn-small" data-category = "tea" type="button">Tea</button>
+                <button class = "category-btn" data-category = "pastry" type="button">Pastries</button>
+            </div>
+
+            <div class = "search-container">
+                <label for = "search-bar" class = "search-label"></label>
+                <input type = "search" id = "search-bar" placeholder = "Search drinks...">
+            </div>
+
+            <div class = "menu-card-items">
+                <div class = "menu-card-content" data-price="140">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Espresso.png" alt = "Espresso" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Espresso </div>
+                        <div class = "menu-card-value">from 140</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+                <div class = "menu-card-content" data-price="100">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Americano.png" alt = "Americano" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Americano </div>
+                        <div class = "menu-card-value">from 100</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>  
+
+                <div class = "menu-card-content" data-price="110">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Cappucino.png" alt = "Cappucino" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Cappucino </div>
+                        <div class = "menu-card-value">from 110</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="110">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Cafe latte.png" alt = "CafÃ© Latte" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> CafÃ© Latte </div>
+                        <div class = "menu-card-value">from 110</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Flat White.png" alt = "Flat White" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Flat White </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="110">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Mocha.png" alt = "Mocha" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Mocha </div>
+                        <div class = "menu-card-value">from 110 </div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="115">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Macchiato.png" alt = "Macchiato" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Macchiato </div>
+                        <div class = "menu-card-value">from 115</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="150">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Espresso-Based Coffee/Ristretto.png" alt = "Ristretto" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Ristretto </div>
+                        <div class = "menu-card-value">from 150</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="140">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced Americano.png" alt = "Iced Americano" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Iced Americano </div>
+                        <div class = "menu-card-value">from 140</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced latte.png" alt = "Iced latte" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Iced latte </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="130">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced Cappuccino.png" alt = "Iced Cappuccino" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Iced Cappuccino </div>
+                        <div class = "menu-card-value">from 130</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="135">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced Mocha.png" alt = "Iced Mocha" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Iced Mocha </div>
+                        <div class = "menu-card-value">from 135</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="100">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Cold Brew.png" alt = "Cold Brew" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Cold Brew </div>
+                        <div class = "menu-card-value">from 100</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="160">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Nitro Cold Brew.png" alt = "Nitro Cold Brew" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Nitro Cold Brew </div>
+                        <div class = "menu-card-value">from 160</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="140">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced Caramel Macchiato.png" alt = "Iced Caramel Macchiato" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> <span class="size"> Iced Caramel Macchiato </span> </div>
+                        <div class = "menu-card-value">from 140</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="130">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Iced Coffee/Iced Vanilla Latte.png" alt = "Iced Vanilla Latte" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name">Iced Vanilla Latte </div>
+                        <div class = "menu-card-value">from 130</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Green Tea.png" alt = "Green Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Green Tea </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Black Tea.png" alt = "Black Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Black Tea </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="130">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/English Breakfast Tea.png" alt = "English Breakfast Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> <span class="size"> English Breakfast Tea </span> </div>
+                        <div class = "menu-card-value">from 130</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="150">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Chamomile Tea.png" alt = "Chamomile Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Chamomile Tea </div>
+                        <div class = "menu-card-value">from 150</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="140">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Jasmine Tea.png" alt = "Jasmine Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Jasmine Tea </div>
+                        <div class = "menu-card-value">from 140</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Peppermint Tea.png" alt = "Peppermint Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Peppermint Tea </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="130">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Tea/Hibiscus Tea.png" alt = "Hibiscus Tea" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Hibiscus Tea </div>
+                        <div class = "menu-card-value">from 130</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="110">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Pastries/Croissant.png" alt = "Croissant" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Croissant </div>
+                        <div class = "menu-card-value">from 110</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="115">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Pastries/Pain au Chocolat.png" alt = "Pain au Chocolat" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Pain au Chocolat </div>
+                        <div class = "menu-card-value">from 115</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="120">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Pastries/Almond Croissant.png" alt = "Almond Croissant" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Almond Croissant </div>
+                        <div class = "menu-card-value">from 120</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="90">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Pastries/Kouign-Amann.png" alt = "Kouign-Amann" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Kouign-Amann </div>
+                        <div class = "menu-card-value">from 90</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+
+                <div class = "menu-card-content" data-price="170">
+                    <div class = "menu-card-wrap">
+                        <img src = "./Pastries/Danish Pastry.jpg" alt = "Danish Pastry" class = "menu-wrap-image">
+                    </div>
+                    <div class = "menu-card-description">
+                        <div class = "menu-card-name"> Danish Pastry </div>
+                        <div class = "menu-card-value">from 170</div>
+                        <button class = "card-add-btn" onclick="openModal()"> Customize & Add </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="product-modal" id="productModal">
+        <button class="product-close" id="productClose" onclick="closeModal()">&times;</button>
+        <div class="modal-content" id="productModalContent">
+            <div class="product-image-col">
+                <img class="product-image" id="productImage" src="" alt="Product Image">
+            </div>
+            <div class="product-details-col">
+                <h2 id="productName"></h2>
+                <p class="product-description" id="productDescription"></p>
+                <!-- SIZE -->
+                <div class="product-size-group" id="sizeGroup">
+                    <label class="option-label">&#9749; Size</label>
+                    <div class="option-item" id="sizeOptions">
+                        <button class="item" data-size="Small">Small</button>
+                        <button class="item" data-size="Medium">Medium</button>
+                    </div>
+                </div>
+
+                <!-- SWEETNESS -->
+                <div class="product-sweetness-group" id="sweetnessGroup">
+                    <label class="option-label">&#128717; Sweetness</label>
+                    <div class="option-item" id="sweetnessOptions">
+                        <button class="item" data-sweetness="regular">Regular</button>
+                        <button class="item" data-sweetness="half">Half</button>
+                        <button class="item" data-sweetness="light">Light</button>
+                    </div>
+                </div>
+
+                <!-- ICE LEVEL -->
+                <div class="product-ice-group" id="iceGroup">
+                    <label class="option-label">&#129482; Ice Level</label>
+                    <div class="option-item" id="iceOptions">
+                        <button class="item" data-ice="Normal Ice">Normal</button>
+                        <button class="item" data-ice="Less Ice">Less Ice</button>
+                        <button class="item" data-ice="No Ice">No Ice</button>
+                    </div>
+                </div>
+
+                <!-- QUANTITY -->
+                <div class="product-quantity-group" id="quantityGroup">
+                    <div class="qty-controls">
+                        <button class="qty-btn" id="decreaseQty">&#8722;</button>
+                        <span class="qty-display" id="qtyDisplay">1</span>
+                        <button class="qty-btn" id="increaseQty">&#43;</button>
+                    </div>
+                    <div class="product-price-total" id="productPriceTotal">
+                        &#8369; 0.00
+                    </div>
+                </div>
+                <button class="btn-primary" id="addToCartBtn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" aria-hidden="true">
+        <div class="cart-header">
+            <h2 id="cartTitle">Your Cart</h2>
+            <button class="cart-close" type="button" aria-label="Close cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <p class="cart-total">Total <strong id="cartTotal">&#8369;0.00</strong></p>
+            <button class="checkout-btn" id="checkoutBtn" type="button">Place Order</button>
+        </div>
+    </aside>
+
+    <div class="history-overlay" id="historyOverlay"></div>
+    <section class="history-dialog" id="historyDialog" role="dialog" aria-modal="true" aria-labelledby="historyTitle" aria-hidden="true">
+        <div class="cart-header">
+            <h2 id="historyTitle">Order History</h2>
+            <button class="history-close" type="button" aria-label="Close order history">&times;</button>
+        </div>
+        <div class="history-items" id="historyItems"></div>
+    </section>
+
+    <script src="./js file/main.js"></script>
+    <script src="./js file/productModal.js"></script>
+</body>
+</html>
